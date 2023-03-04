@@ -20,7 +20,7 @@ namespace UIWindowSystemsDemo.Maui.Handlers
             {
                 IsHitTestVisible = true
             };
-            
+
             return swapChainPanel;
         }
 
