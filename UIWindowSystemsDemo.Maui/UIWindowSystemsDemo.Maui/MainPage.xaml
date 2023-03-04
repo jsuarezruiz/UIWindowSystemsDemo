@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="UIWindowSystemsDemo.Maui.MainPage"
+    xmlns:controls="clr-namespace:UIWindowSystemsDemo.Maui.Controls"
+    Title="Evergine .NET MAUI integration sample">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <controls:EvergineView
+            x:Name="EvergineViewl"
+            Grid.Column="0"
+            DisplayName="DefaultDisplay"/>
+        <controls:EvergineView 
+            x:Name="EvergineView2" 
+            Grid.Column="1"
+            DisplayName="Display2"/>
+        <StackLayout 
+            Grid.Column="2" 
+            Margin="12">
+            <Label
+                Margin="0,0,0,12"
+                FontAttributes="Bold"
+                Text="Evergine .NET MAUI integration sample." />
+            <Label 
+                Text="You can move the scene's cameras using W,A,S and D keys while clicking the right mouse button. Use the button below button to reset the cameras to their initial position and orientation." 
+                LineBreakMode="WordWrap" />
+            <Button
+                Margin="0,12"
+                Padding="12,3"
+                HorizontalOptions="Start"
+                Clicked="OnResetCameraClicked"
+                Text="Reset cameras" />
+            <Label 
+                Text="Displacement:" />
+            <Slider
+                Maximum="10"
+                Minimum="0"
+                ValueChanged="OnDisplacementChanged" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
